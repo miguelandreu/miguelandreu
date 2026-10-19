@@ -1,6 +1,7 @@
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { useLocale } from './i18n/LocaleContext'
+import { About } from './sections/About'
 import { Home } from './sections/Home'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <main id="main" className="container">
         <Home />
+        <About />
       </main>
       <Footer />
     </>

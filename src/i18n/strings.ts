@@ -8,6 +8,14 @@ export interface UiStrings {
   theme: { toLight: string; toDark: string }
   sections: Record<SectionId, string>
   home: { viewProjects: string; contact: string }
+  about: {
+    education: string
+    certifications: string
+    issued: string
+    expires: string
+    viewCredential: string
+  }
+  present: string
 }
 
 export const strings: Localized<UiStrings> = {
@@ -24,6 +32,14 @@ export const strings: Localized<UiStrings> = {
       contact: 'Contact',
     },
     home: { viewProjects: 'View projects', contact: 'Get in touch' },
+    about: {
+      education: 'Education',
+      certifications: 'Certifications',
+      issued: 'Issued',
+      expires: 'Expires',
+      viewCredential: 'View credential',
+    },
+    present: 'Present',
   },
   es: {
     skipToContent: 'Saltar al contenido',
@@ -38,5 +54,13 @@ export const strings: Localized<UiStrings> = {
       contact: 'Contacto',
     },
     home: { viewProjects: 'Ver proyectos', contact: 'Contactar' },
+    about: {
+      education: 'Formación',
+      certifications: 'Certificaciones',
+      issued: 'Emitida',
+      expires: 'Caduca',
+      viewCredential: 'Ver credencial',
+    },
+    present: 'Actualidad',
   },
 }

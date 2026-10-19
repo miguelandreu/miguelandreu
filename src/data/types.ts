@@ -1,7 +1,33 @@
 import type { Localized } from '../i18n/locale'
 
+/** A month as 'YYYY-MM', formatted per locale when displayed. */
+export type YearMonth = `${number}-${number}`
+
 export interface Profile {
   name: string
   role: Localized
   intro: Localized
+  /** About section paragraphs. */
+  bio: Localized<string[]>
+}
+
+export interface Education {
+  id: string
+  institution: string
+  institutionUrl?: string
+  degree: Localized
+  startYear: number
+  /** null while still studying. */
+  endYear: number | null
+  description?: Localized
+}
+
+export interface Certification {
+  id: string
+  /** Official certification name, usually not translated. */
+  name: string
+  issuer: string
+  issued: YearMonth
+  expires?: YearMonth
+  credentialUrl?: string
 }
