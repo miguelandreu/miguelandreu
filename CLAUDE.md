@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website for Miguel Andreu, showcasing his work and projects. Planned sections: Home, About, Projects, Experience and Contact. The site is static-first and deployed to Cloudflare, with automatic deployment from GitHub on every push to `main`.
+Personal portfolio website for Miguel Andreu, showcasing his work and projects. A single scrolling page with the sections Home, About (bio, education, certifications), Experience, Projects (personal projects) and Contact (email, GitHub, LinkedIn). The site is static-first and deployed to Cloudflare, with automatic deployment from GitHub on every push to `main`.
 
 ## Commands
 
@@ -24,6 +24,14 @@ A React 19 SPA and a Cloudflare Worker deployed together as a single Worker (`wr
 - `src/` — the React frontend (entry `src/main.tsx` → `App.tsx`), built by Vite and served as static assets.
 - `worker/index.ts` — the Worker `fetch` handler (`ExportedHandler<Env>`). Requests not matching a static asset reach it; it currently returns 404 for everything, since the site is static. Add routes (e.g. `/api/*`, called from the frontend with a relative `fetch`) only when server logic is needed.
 - `assets.not_found_handling: "single-page-application"` in `wrangler.jsonc` makes unknown non-API paths fall back to `index.html`, so client-side routing works.
+
+### Frontend (`src/`)
+
+- **Content** lives in typed data files in `src/data/` (`profile`, `education`, `certifications`, `experience`, `projects`, `social`), with types in `src/data/types.ts`. Translatable fields use `Localized<T>` (`Record<'en' | 'es', T>`), so a missing translation fails the build. Dates are `YearMonth` strings (`'2024-03'`) formatted per locale by `src/i18n/format.ts`.
+- **Sections** (`src/sections/`) are rendered in `App.tsx`. Their order and anchor ids come from `sectionIds` in `src/data/sections.ts`, which also drives the nav and its active-section highlight (`src/hooks/useActiveSection.ts`). Wrap new sections in `components/Section`, which renders the anchor and translated `<h2>`.
+- **UI strings** (nav, headings, button labels) are in `src/i18n/strings.ts`, typed as `Localized<UiStrings>`. Components read them, and the current locale, via `useLocale()`. The locale is detected from the browser, can be switched in the header, and is saved in `localStorage`; there is one URL for both languages.
+- **Styling** is plain CSS: design tokens in `src/styles/tokens.css` (colors use `light-dark()`), globals and helpers (`.container`, `.visually-hidden`, `.skip-link`) in `src/styles/base.css`, and a CSS Module per component. The theme follows the system unless the visitor uses the header toggle, which sets `data-theme` on `<html>` and is applied before first paint by an inline script in `index.html`.
+- `index.html` holds English title, description and Open Graph tags for crawlers. Keep them in sync with `src/data/profile.ts`; the app translates the title and description at runtime.
 
 TypeScript is split into project references (`tsconfig.json`): `tsconfig.app.json` (covers `src/`, DOM types), `tsconfig.node.json` (Vite config), and `tsconfig.worker.json` (covers `worker/`, uses the generated `worker-configuration.d.ts` types). Code in `worker/` must not rely on DOM types, and vice versa. All projects enable `verbatimModuleSyntax` (use `import type` for type-only imports), `erasableSyntaxOnly` (no `enum`, `namespace`, or constructor parameter properties), and `noUnusedLocals`/`noUnusedParameters`, so unused code fails `npm run build`.
 
