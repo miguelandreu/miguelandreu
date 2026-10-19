@@ -24,7 +24,7 @@ export const profile: Profile = {
     ],
   },
   contactIntro: {
-    en: 'I am open to new opportunities and collaborations. The best way to reach me is by email.',
-    es: 'Estoy abierto a nuevas oportunidades y colaboraciones. La mejor forma de contactarme es por correo.',
+    en: 'Are you interested in knowing more about my work? The best way to reach me is by email.',
+    es: '¿Estás interesado en saber más sobre mi trabajo? La mejor forma de contactarme es por correo.',
   },
 }
