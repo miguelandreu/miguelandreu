@@ -1,5 +1,5 @@
 .home {
-  padding-block: clamp(var(--space-12), 12vw, 9rem);
+  padding-block: clamp(var(--space-8), 5vw, var(--space-16));
 }
 
 .role {
