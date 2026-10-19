@@ -15,8 +15,8 @@
   --color-on-accent: light-dark(#ffffff, #0e1014);
   --color-focus: var(--color-accent);
 
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-sans: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
   /* Fluid type scale: grows with the viewport between ~360px and ~1200px. */
   --text-sm: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
