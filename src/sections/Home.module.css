@@ -1,5 +1,21 @@
 .home {
+  position: relative;
+  isolation: isolate;
   padding-block: clamp(var(--space-8), 5vw, var(--space-16));
+}
+
+/* Decorative background: a soft accent glow and a faint dot grid, full window width,
+   fading out towards the bottom. Pure CSS, so it costs no download and follows the theme. */
+.home::before {
+  content: '';
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 45% 60% at 80% 35%, color-mix(in srgb, var(--color-accent) 16%, transparent), transparent 70%),
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--color-text) 12%, transparent) 1px, transparent 0) 0 0 / 22px 22px;
+  mask-image: linear-gradient(to bottom, black 55%, transparent);
+  pointer-events: none;
 }
 
 .role {

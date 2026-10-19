@@ -4,7 +4,7 @@ import type { Project } from './types'
 export const projects: Project[] = [
   {
     id: 'portfolio',
-    title: 'miguelandreu',
+    title: 'Personal Portfolio',
     summary: {
       en: 'This website: a bilingual (English/Spanish) portfolio built with React and TypeScript and deployed on Cloudflare Workers.',
       es: 'Esta web: un portfolio bilingüe (inglés/español) hecho con React y TypeScript y desplegado en Cloudflare Workers.',
@@ -15,10 +15,10 @@ export const projects: Project[] = [
   },
   {
     id: 'weekly-menu-helper',
-    title: 'Weekly Menu Helper',
+    title: 'Weekly Menu Agent',
     summary: {
-      en: 'A planner for the weekly meal menu.',
-      es: 'Un planificador del menú semanal.',
+      en: 'A planner for the weekly meal menu. Based on meal preferences, dietary restrictions and available ingredients, it generates a weekly menu with recipes and a shopping list.',
+      es: 'Un planificador del menú semanal. Basado en las preferencias de comida, restricciones dietéticas y los ingredientes disponibles, genera un menú semanal con recetas y una lista de compras.',
     },
     year: 2026,
     tech: ['OpenAI API', 'GitHub Actions', 'Python'],
@@ -28,7 +28,7 @@ export const projects: Project[] = [
   },
   {
     id: 'dabs-metadata',
-    title: 'dabs-metadata',
+    title: 'SDP Metadata-driven Medallion Pipelines',
     summary: {
       en: 'Metadata-driven medallion pipelines on Databricks: Spark Declarative Pipelines generated from configuration and deployed with Databricks Asset Bundles.',
       es: 'Pipelines medallón dirigidos por metadatos en Databricks: Spark Declarative Pipelines generados a partir de configuración y desplegados con Databricks Asset Bundles.',

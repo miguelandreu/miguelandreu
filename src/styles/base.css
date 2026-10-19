@@ -95,6 +95,8 @@ code {
   display: flex;
   flex-direction: column;
   min-height: 100svh;
+  /* Full-bleed decorations use 100vw, which includes the scrollbar; clip without creating a scroll container. */
+  overflow-x: clip;
 }
 
 main {
