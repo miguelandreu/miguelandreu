@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <script>
@@ -14,7 +13,20 @@
         // Storage unavailable: follow the system theme.
       }
     </script>
-    <title>Miguel Andreu</title>
+    <!--
+      English defaults for crawlers and link previews, which don't run JavaScript.
+      Keep in sync with name, role and intro in src/data/profile.ts; the app updates
+      the title and description to the visitor's language at runtime.
+    -->
+    <title>Miguel Andreu · Software Engineer</title>
+    <meta name="description" content="A short introduction goes here: what you do, what you care about and what you are looking for." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Miguel Andreu · Software Engineer" />
+    <meta property="og:description" content="A short introduction goes here: what you do, what you care about and what you are looking for." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
     <div id="root"></div>
