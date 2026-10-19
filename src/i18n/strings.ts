@@ -27,8 +27,8 @@ export const strings: Localized<UiStrings> = {
     sections: {
       home: 'Home',
       about: 'About',
-      projects: 'Projects',
       experience: 'Experience',
+      projects: 'Projects',
       contact: 'Contact',
     },
     home: { viewProjects: 'View projects', contact: 'Get in touch' },
@@ -49,8 +49,8 @@ export const strings: Localized<UiStrings> = {
     sections: {
       home: 'Inicio',
       about: 'Sobre mí',
-      projects: 'Proyectos',
       experience: 'Experiencia',
+      projects: 'Proyectos',
       contact: 'Contacto',
     },
     home: { viewProjects: 'Ver proyectos', contact: 'Contactar' },
