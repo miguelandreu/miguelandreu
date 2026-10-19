@@ -9,6 +9,8 @@ export interface Profile {
   intro: Localized
   /** About section paragraphs. */
   bio: Localized<string[]>
+  /** Short invitation shown in the Contact section. */
+  contactIntro: Localized
 }
 
 export interface Education {
@@ -53,4 +55,12 @@ export interface Project {
   year: number
   tech: string[]
   links: { repo?: string; live?: string }
+}
+
+export type SocialId = 'email' | 'github' | 'linkedin'
+
+export interface SocialLink {
+  id: SocialId
+  /** mailto: for email, the profile URL otherwise. */
+  href: string
 }

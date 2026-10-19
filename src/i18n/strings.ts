@@ -1,4 +1,5 @@
 import type { SectionId } from '../data/sections'
+import type { SocialId } from '../data/types'
 import type { Localized } from './locale'
 
 export interface UiStrings {
@@ -18,6 +19,7 @@ export interface UiStrings {
   projects: { title: string; code: string; live: string }
   present: string
   technologies: string
+  social: Record<SocialId, string>
 }
 
 export const strings: Localized<UiStrings> = {
@@ -44,6 +46,7 @@ export const strings: Localized<UiStrings> = {
     projects: { title: 'Personal projects', code: 'Code', live: 'Live site' },
     present: 'Present',
     technologies: 'Technologies',
+    social: { email: 'Email', github: 'GitHub', linkedin: 'LinkedIn' },
   },
   es: {
     skipToContent: 'Saltar al contenido',
@@ -68,5 +71,6 @@ export const strings: Localized<UiStrings> = {
     projects: { title: 'Proyectos personales', code: 'Código', live: 'Ver web' },
     present: 'Actualidad',
     technologies: 'Tecnologías',
+    social: { email: 'Correo', github: 'GitHub', linkedin: 'LinkedIn' },
   },
 }

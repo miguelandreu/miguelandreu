@@ -2,7 +2,7 @@ import type { Profile } from './types'
 
 export const profile: Profile = {
   name: 'Miguel Andreu',
-  // TODO: replace placeholder role, intro and bio.
+  // TODO: replace placeholder role, intro, bio and contact intro.
   role: {
     en: 'Software Engineer',
     es: 'Ingeniero de software',
@@ -20,5 +20,9 @@ export const profile: Profile = {
       'Un primer párrafo sobre quién eres: tu trayectoria y cómo llegaste a este campo.',
       'Un segundo párrafo sobre cómo trabajas, qué disfrutas y qué haces fuera del trabajo.',
     ],
+  },
+  contactIntro: {
+    en: 'I am open to new opportunities and collaborations. The best way to reach me is by email.',
+    es: 'Estoy abierto a nuevas oportunidades y colaboraciones. La mejor forma de contactarme es por correo.',
   },
 }
