@@ -13,11 +13,11 @@ export function LanguageSwitch() {
           type="button"
           className={styles.option}
           lang={option}
-          aria-label={localeNames[option]}
           aria-pressed={option === locale}
           onClick={() => setLocale(option)}
         >
           {option.toUpperCase()}
+          <span className="visually-hidden"> {localeNames[option]}</span>
         </button>
       ))}
     </div>
