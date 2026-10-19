@@ -34,12 +34,14 @@ function ExperienceItem({ item }: { item: ExperienceEntry }) {
           {item.companyUrl ? <a href={item.companyUrl}>{item.company}</a> : item.company}
           {item.location && ` · ${item.location[locale]}`}
         </p>
-        <ul className={styles.highlights}>
-          {item.highlights[locale].map((highlight) => (
-            <li key={highlight}>{highlight}</li>
-          ))}
-        </ul>
-        <TagList label={t.technologies} tags={item.tech} />
+        {item.highlights[locale].length > 0 && (
+          <ul className={styles.highlights}>
+            {item.highlights[locale].map((highlight) => (
+              <li key={highlight}>{highlight}</li>
+            ))}
+          </ul>
+        )}
+        {item.tech.length > 0 && <TagList label={t.technologies} tags={item.tech} />}
       </div>
     </li>
   )

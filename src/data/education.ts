@@ -1,29 +1,45 @@
 import type { Education } from './types'
 
-// TODO: replace placeholder entries. Most recent first.
+// Most recent first.
 export const education: Education[] = [
   {
-    id: 'masters',
-    institution: 'University Name',
+    id: 'uoc-project-management',
+    institution: 'Universitat Oberta de Catalunya',
     degree: {
-      en: "Master's in Software Engineering",
-      es: 'Máster en Ingeniería del Software',
+      en: 'Postgraduate Diploma in Project Management',
+      es: 'Postgrado en Gestión de Proyectos',
     },
-    startYear: 2019,
-    endYear: 2020,
+    startYear: 2025,
+    endYear: 2025,
   },
   {
-    id: 'bachelors',
-    institution: 'University Name',
+    id: 'uam-big-data',
+    institution: 'Universidad Autónoma de Madrid',
     degree: {
-      en: "Bachelor's in Computer Science",
-      es: 'Grado en Ingeniería Informática',
+      en: "Master's in Big Data and Data Science",
+      es: 'Máster en Big Data y Data Science',
     },
-    startYear: 2015,
-    endYear: 2019,
-    description: {
-      en: 'Optional note, e.g. a specialization or final project.',
-      es: 'Nota opcional, por ejemplo una especialidad o el trabajo de fin de grado.',
+    startYear: 2019,
+    endYear: 2021,
+  },
+  {
+    id: 'ucav-web-programming',
+    institution: 'Universidad Católica de Ávila',
+    degree: {
+      en: 'Technical Specialization in Web Programming',
+      es: 'Especialización Técnica en Programación Web',
     },
+    startYear: 2016,
+    endYear: 2017,
+  },
+  {
+    id: 'teide-dam',
+    institution: 'Centro Teide IV',
+    degree: {
+      en: 'Higher Technician in Multiplatform Application Development',
+      es: 'Técnico Superior en Desarrollo de Aplicaciones Multiplataforma',
+    },
+    startYear: 2012,
+    endYear: 2014,
   },
 ]

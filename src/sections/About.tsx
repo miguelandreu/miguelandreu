@@ -50,8 +50,12 @@ function EducationItem({ item }: { item: Education }) {
         {item.institutionUrl ? <a href={item.institutionUrl}>{item.institution}</a> : item.institution}
         {' · '}
         <time dateTime={String(item.startYear)}>{item.startYear}</time>
-        {' – '}
-        {item.endYear ? <time dateTime={String(item.endYear)}>{item.endYear}</time> : t.present}
+        {item.endYear !== item.startYear && (
+          <>
+            {' – '}
+            {item.endYear ? <time dateTime={String(item.endYear)}>{item.endYear}</time> : t.present}
+          </>
+        )}
       </p>
       {item.description && <p className={styles.description}>{item.description[locale]}</p>}
     </li>
