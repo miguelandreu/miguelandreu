@@ -15,6 +15,8 @@ export interface UiStrings {
     issued: string
     expires: string
     viewCredential: string
+    credentialId: string
+    expired: string
   }
   projects: { title: string; code: string; live: string }
   present: string
@@ -42,6 +44,8 @@ export const strings: Localized<UiStrings> = {
       issued: 'Issued',
       expires: 'Expires',
       viewCredential: 'View credential',
+      credentialId: 'Credential ID',
+      expired: 'Expired',
     },
     projects: { title: 'Personal projects', code: 'Code', live: 'Live site' },
     present: 'Present',
@@ -67,6 +71,8 @@ export const strings: Localized<UiStrings> = {
       issued: 'Emitida',
       expires: 'Caduca',
       viewCredential: 'Ver credencial',
+      credentialId: 'ID de la credencial',
+      expired: 'Caducó',
     },
     projects: { title: 'Proyectos personales', code: 'Código', live: 'Ver web' },
     present: 'Actualidad',

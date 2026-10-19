@@ -2,7 +2,7 @@ import { Section } from '../components/Section'
 import { certifications } from '../data/certifications'
 import { education } from '../data/education'
 import { profile } from '../data/profile'
-import type { Certification, Education } from '../data/types'
+import type { Certification, Education, YearMonth } from '../data/types'
 import { formatYearMonth } from '../i18n/format'
 import { useLocale } from '../i18n/LocaleContext'
 import styles from './About.module.css'
@@ -75,10 +75,15 @@ function CertificationItem({ item }: { item: Certification }) {
         {item.expires && (
           <>
             {' · '}
-            {t.about.expires} <time dateTime={item.expires}>{formatYearMonth(item.expires, locale)}</time>
+            {isPast(item.expires) ? t.about.expired : t.about.expires} <time dateTime={item.expires}>{formatYearMonth(item.expires, locale)}</time>
           </>
         )}
       </p>
+      {item.credentialId && (
+        <p className={styles.meta}>
+          {t.about.credentialId}: <span className={styles.credentialId}>{item.credentialId}</span>
+        </p>
+      )}
       {item.credentialUrl && (
         <a
           className={styles.credential}
@@ -90,4 +95,11 @@ function CertificationItem({ item }: { item: Certification }) {
       )}
     </li>
   )
+}
+
+/** Whether a month is before the current one, e.g. an expiry date that has passed. */
+function isPast(value: YearMonth) {
+  const now = new Date()
+  const current = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
+  return value < current
 }

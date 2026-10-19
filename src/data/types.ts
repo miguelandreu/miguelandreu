@@ -31,6 +31,7 @@ export interface Certification {
   issuer: string
   issued: YearMonth
   expires?: YearMonth
+  credentialId?: string
   credentialUrl?: string
 }
 
