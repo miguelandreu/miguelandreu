@@ -5,6 +5,9 @@ export type Locale = (typeof locales)[number]
 /** A value that must be provided for every supported locale. */
 export type Localized<T = string> = Record<Locale, T>
 
+/** Each language's name in that language, for the language switch. */
+export const localeNames: Localized = { en: 'English', es: 'Español' }
+
 const defaultLocale: Locale = 'en'
 const storageKey = 'locale'
 

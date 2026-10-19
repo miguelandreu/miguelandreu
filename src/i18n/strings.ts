@@ -1,24 +1,19 @@
+import type { SectionId } from '../data/sections'
 import type { Localized } from './locale'
 
 export interface UiStrings {
   skipToContent: string
   language: string
-  nav: {
-    label: string
-    home: string
-    about: string
-    projects: string
-    experience: string
-    contact: string
-  }
+  navLabel: string
+  sections: Record<SectionId, string>
 }
 
 export const strings: Localized<UiStrings> = {
   en: {
     skipToContent: 'Skip to content',
     language: 'Language',
-    nav: {
-      label: 'Main',
+    navLabel: 'Main',
+    sections: {
       home: 'Home',
       about: 'About',
       projects: 'Projects',
@@ -29,8 +24,8 @@ export const strings: Localized<UiStrings> = {
   es: {
     skipToContent: 'Saltar al contenido',
     language: 'Idioma',
-    nav: {
-      label: 'Principal',
+    navLabel: 'Principal',
+    sections: {
       home: 'Inicio',
       about: 'Sobre mí',
       projects: 'Proyectos',
