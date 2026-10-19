@@ -12,7 +12,7 @@ export function CertificationBadges() {
   return (
     <ul className={styles.badges} aria-label={t.about.certifications}>
       {withBadge.map((item) => {
-        const image = <img src={item.badge} alt={item.name} height="80" />
+        const image = <img src={item.badge} alt={item.name} height="48" />
         return (
           <li key={item.id}>
             {item.credentialUrl ? (

@@ -8,8 +8,8 @@ export const profile: Profile = {
     es: 'Databricks Solutions Architect / Forward Deployed Engineer',
   },
   intro: {
-    en: 'Data architect and tech lead with 8 years of experience designing and building scalable data platforms on Databricks, Azure and GCP.',
-    es: 'Arquitecto de datos y tech lead con 8 años de experiencia diseñando e implementando plataformas de datos escalables en Databricks, Azure y GCP.',
+    en: "Data architect and tech lead with 8 years of experience designing scalable data platforms on Databricks, Azure and GCP for the pharmaceutical, retail, automotive and chemical sectors. Master's in Big Data and Data Science (Universidad Autónoma de Madrid) and Postgraduate Diploma in Project Management (Universitat Oberta de Catalunya).",
+    es: 'Arquitecto de datos y tech lead con 8 años de experiencia diseñando plataformas de datos escalables en Databricks, Azure y GCP para los sectores farmacéutico, retail, automoción y químico. Máster en Big Data y Data Science (Universidad Autónoma de Madrid) y Postgrado en Gestión de Proyectos (Universitat Oberta de Catalunya).',
   },
   bio: {
     en: [

@@ -8,6 +8,7 @@ export function Home() {
 
   return (
     <section id="home" className={styles.home} aria-labelledby="home-title">
+      <CertificationBadges />
       <h1 id="home-title">{profile.name}</h1>
       <p className={styles.role}>{profile.role[locale]}</p>
       <p className={styles.intro}>{profile.intro[locale]}</p>
@@ -16,7 +17,6 @@ export function Home() {
           {t.home.contact}
         </a>
       </div>
-      <CertificationBadges />
     </section>
   )
 }
