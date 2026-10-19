@@ -6,7 +6,10 @@ export type YearMonth = `${number}-${number}`
 export interface Profile {
   name: string
   role: Localized
+  /** Short, commercial one-liner shown prominently on Home. */
   intro: Localized
+  /** Supporting line under the intro: experience and studies. */
+  summary: Localized
   /** Short invitation shown in the Contact section. */
   contactIntro: Localized
 }
