@@ -40,6 +40,8 @@ export interface Certification {
 export interface Experience {
   id: string
   company: string
+  /** Logo image path under public/, e.g. '/logos/databricks.png'. */
+  companyLogo?: string
   companyUrl?: string
   role: Localized
   start: YearMonth

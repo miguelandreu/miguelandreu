@@ -7,6 +7,7 @@ export const experience: Experience[] = [
   {
     id: 'databricks-rsa',
     company: 'Databricks',
+    companyLogo: '/logos/databricks.png',
     role: {
       en: 'Resident Solution Architect / Forward Deployed Engineer (contractor)',
       es: 'Resident Solution Architect / Forward Deployed Engineer (contractor)',
@@ -20,6 +21,7 @@ export const experience: Experience[] = [
   {
     id: 'ultra-tendency-sa',
     company: 'Ultra Tendency',
+    companyLogo: '/logos/ultra-tendency.png',
     role: {
       en: 'Databricks Solutions Architect',
       es: 'Databricks Solutions Architect',
@@ -33,6 +35,7 @@ export const experience: Experience[] = [
   {
     id: 'astellas-tech-lead',
     company: 'Astellas Pharma',
+    companyLogo: '/logos/astellas.png',
     role: {
       en: 'Tech Lead & Data Architect',
       es: 'Tech Lead & Data Architect',
@@ -55,6 +58,7 @@ export const experience: Experience[] = [
   {
     id: 'astellas-senior-de',
     company: 'Astellas Pharma',
+    companyLogo: '/logos/astellas.png',
     role: {
       en: 'Senior Data Engineer',
       es: 'Senior Data Engineer',
@@ -71,6 +75,7 @@ export const experience: Experience[] = [
   {
     id: 'capitole-lead-architect',
     company: 'Capitole',
+    companyLogo: '/logos/capitole.png',
     role: {
       en: 'Lead Data Engineering & Data Architect',
       es: 'Lead Data Engineering & Data Architect',
@@ -87,6 +92,7 @@ export const experience: Experience[] = [
   {
     id: 'capitole-practice-lead',
     company: 'Capitole',
+    companyLogo: '/logos/capitole.png',
     role: {
       en: 'Data & AI Practice & Factory Lead',
       es: 'Data & AI Practice & Factory Lead',
@@ -103,6 +109,7 @@ export const experience: Experience[] = [
   {
     id: 'capitole-senior-de',
     company: 'Capitole',
+    companyLogo: '/logos/capitole.png',
     role: {
       en: 'Senior Data Engineer',
       es: 'Senior Data Engineer',
@@ -118,6 +125,7 @@ export const experience: Experience[] = [
   {
     id: 'capitole-de-ds',
     company: 'Capitole',
+    companyLogo: '/logos/capitole.png',
     role: {
       en: 'Data Engineer & Data Scientist',
       es: 'Data Engineer & Data Scientist',
@@ -133,6 +141,7 @@ export const experience: Experience[] = [
   {
     id: 'samsung',
     company: 'Samsung España',
+    companyLogo: '/logos/samsung.png',
     role: {
       en: 'Software Engineer & Data Engineer',
       es: 'Software Engineer & Data Engineer',
@@ -148,6 +157,7 @@ export const experience: Experience[] = [
   {
     id: 'ikea',
     company: 'IKEA España',
+    companyLogo: '/logos/ikea.png',
     role: {
       en: 'Digitalization Specialist',
       es: 'Digitalization Specialist',

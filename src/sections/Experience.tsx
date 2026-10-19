@@ -29,11 +29,19 @@ function ExperienceItem({ item }: { item: ExperienceEntry }) {
         {item.end ? <time dateTime={item.end}>{formatYearMonth(item.end, locale)}</time> : t.present}
       </p>
       <div>
-        <h3>{item.role[locale]}</h3>
-        <p className={styles.company}>
-          {item.companyUrl ? <a href={item.companyUrl}>{item.company}</a> : item.company}
-          {item.location && ` · ${item.location[locale]}`}
-        </p>
+        <div className={styles.header}>
+          {/* Decorative: the company name is right next to it. */}
+          {item.companyLogo && (
+            <img className={styles.logo} src={item.companyLogo} alt="" width="48" height="48" loading="lazy" />
+          )}
+          <div>
+            <h3>{item.role[locale]}</h3>
+            <p className={styles.company}>
+              {item.companyUrl ? <a href={item.companyUrl}>{item.company}</a> : item.company}
+              {item.location && ` · ${item.location[locale]}`}
+            </p>
+          </div>
+        </div>
         {item.highlights[locale].length > 0 && (
           <ul className={styles.highlights}>
             {item.highlights[locale].map((highlight) => (
