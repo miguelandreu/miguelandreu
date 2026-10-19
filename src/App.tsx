@@ -3,7 +3,7 @@ import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { profile } from './data/profile'
 import { useLocale } from './i18n/LocaleContext'
-import { About } from './sections/About'
+import { Certifications } from './sections/Certifications'
 import { Contact } from './sections/Contact'
 import { Experience } from './sections/Experience'
 import { Home } from './sections/Home'
@@ -26,8 +26,8 @@ function App() {
       <Header />
       <main id="main" className="container">
         <Home />
-        <About />
         <Experience />
+        <Certifications />
         <Projects />
         <Contact />
       </main>

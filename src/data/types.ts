@@ -7,8 +7,6 @@ export interface Profile {
   name: string
   role: Localized
   intro: Localized
-  /** About section paragraphs. */
-  bio: Localized<string[]>
   /** Short invitation shown in the Contact section. */
   contactIntro: Localized
 }
@@ -21,7 +19,6 @@ export interface Education {
   startYear: number
   /** null while still studying. */
   endYear: number | null
-  description?: Localized
 }
 
 export interface Certification {

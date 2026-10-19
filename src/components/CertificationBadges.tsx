@@ -10,7 +10,7 @@ export function CertificationBadges() {
   if (withBadge.length === 0) return null
 
   return (
-    <ul className={styles.badges} aria-label={t.about.certifications}>
+    <ul className={styles.badges} aria-label={t.credentials.certifications}>
       {withBadge.map((item) => {
         const image = <img src={item.badge} alt={item.name} height="48" />
         return (

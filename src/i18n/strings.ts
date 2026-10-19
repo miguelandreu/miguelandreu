@@ -9,7 +9,8 @@ export interface UiStrings {
   theme: { toLight: string; toDark: string }
   sections: Record<SectionId, string>
   home: { contact: string }
-  about: {
+  credentials: {
+    title: string
     education: string
     certifications: string
     viewCredential: string
@@ -28,13 +29,14 @@ export const strings: Localized<UiStrings> = {
     theme: { toLight: 'Switch to light theme', toDark: 'Switch to dark theme' },
     sections: {
       home: 'Home',
-      about: 'About',
       experience: 'Experience',
+      certifications: 'Certifications',
       projects: 'Projects',
       contact: 'Contact',
     },
     home: { contact: 'Get in touch' },
-    about: {
+    credentials: {
+      title: 'Certifications & courses',
       education: 'Education',
       certifications: 'Certifications',
       viewCredential: 'View credential',
@@ -51,13 +53,14 @@ export const strings: Localized<UiStrings> = {
     theme: { toLight: 'Cambiar a tema claro', toDark: 'Cambiar a tema oscuro' },
     sections: {
       home: 'Inicio',
-      about: 'Sobre mí',
       experience: 'Experiencia',
+      certifications: 'Certificaciones',
       projects: 'Proyectos',
       contact: 'Contacto',
     },
     home: { contact: 'Contactar' },
-    about: {
+    credentials: {
+      title: 'Certificaciones y formación',
       education: 'Formación',
       certifications: 'Certificaciones',
       viewCredential: 'Ver credencial',
