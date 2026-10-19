@@ -8,7 +8,7 @@ Personal portfolio website for Miguel Andreu, showcasing his work and projects. 
 
 ## Commands
 
-- `npm run dev` — Vite dev server with HMR; the Worker runs alongside it in the Workers runtime via `@cloudflare/vite-plugin`, so `/api/*` works locally without a separate `wrangler dev`.
+- `npm run dev` — Vite dev server with HMR; the Worker runs alongside it in the Workers runtime via `@cloudflare/vite-plugin`, so no separate `wrangler dev` is needed. If the page is blank after a config or `index.html` change, restart with `npm run dev -- --force` to rebuild the dependency cache.
 - `npm run build` — `tsc -b` (type-checks all three project references) then `vite build`.
 - `npm run lint` — ESLint over the whole repo.
 - `npm run preview` — build, then serve the production build locally.
@@ -22,7 +22,7 @@ There is no test framework configured.
 A React 19 SPA and a Cloudflare Worker deployed together as a single Worker (`wrangler.jsonc`, name `miguel-andreu`):
 
 - `src/` — the React frontend (entry `src/main.tsx` → `App.tsx`), built by Vite and served as static assets.
-- `worker/index.ts` — the Worker `fetch` handler (`ExportedHandler<Env>`). Requests not matching a static asset reach it; it currently handles `/api/*` and returns 404 otherwise. The frontend calls it with relative `fetch('/api/...')`.
+- `worker/index.ts` — the Worker `fetch` handler (`ExportedHandler<Env>`). Requests not matching a static asset reach it; it currently returns 404 for everything, since the site is static. Add routes (e.g. `/api/*`, called from the frontend with a relative `fetch`) only when server logic is needed.
 - `assets.not_found_handling: "single-page-application"` in `wrangler.jsonc` makes unknown non-API paths fall back to `index.html`, so client-side routing works.
 
 TypeScript is split into project references (`tsconfig.json`): `tsconfig.app.json` (covers `src/`, DOM types), `tsconfig.node.json` (Vite config), and `tsconfig.worker.json` (covers `worker/`, uses the generated `worker-configuration.d.ts` types). Code in `worker/` must not rely on DOM types, and vice versa. All projects enable `verbatimModuleSyntax` (use `import type` for type-only imports), `erasableSyntaxOnly` (no `enum`, `namespace`, or constructor parameter properties), and `noUnusedLocals`/`noUnusedParameters`, so unused code fails `npm run build`.
