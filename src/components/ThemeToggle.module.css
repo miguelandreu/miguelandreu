@@ -1,0 +1,17 @@
+.toggle {
+  display: inline-grid;
+  place-items: center;
+  /* Same height as the language switch next to it. */
+  width: calc(2rem + 6px);
+  height: calc(2rem + 6px);
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
+  background: none;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  color: var(--color-text);
+}

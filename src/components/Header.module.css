@@ -21,3 +21,8 @@
   color: var(--color-text);
   text-decoration: none;
 }
+
+.controls {
+  display: flex;
+  gap: var(--space-2);
+}

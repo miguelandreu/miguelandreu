@@ -1,5 +1,6 @@
 import { LanguageSwitch } from './LanguageSwitch'
 import { Nav } from './Nav'
+import { ThemeToggle } from './ThemeToggle'
 import styles from './Header.module.css'
 
 export function Header() {
@@ -10,7 +11,10 @@ export function Header() {
           Miguel Andreu
         </a>
         <Nav />
-        <LanguageSwitch />
+        <div className={styles.controls}>
+          <LanguageSwitch />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   )
