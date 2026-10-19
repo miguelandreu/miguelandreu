@@ -3,7 +3,7 @@ import type { Certification } from './types'
 // Most recent first.
 // Paste the verification URL into credentialUrl to show a "View credential" link;
 // leave it empty ('') when the certification has no public credential page.
-// Put badge images in public/badges/ and set badge to their path (e.g. '/badges/aws.png')
+// Put badge images in public/badges/ and set badge to their path (e.g. '/badges/aws.webp'; square images)
 // to show them on the Home section; certifications without a badge are not shown there.
 export const certifications: Certification[] = [
   {
@@ -14,7 +14,7 @@ export const certifications: Certification[] = [
     expires: '2028-09',
     credentialId: '194134329',
     credentialUrl: 'https://credentials.databricks.com/1682d27b-9722-47b5-a7eb-2b9d10ce1922#acc.Zb0jmsCH',
-    badge: '/badges/databricks-de-professional.png',
+    badge: '/badges/databricks-de-professional.webp',
   },
   {
     id: 'terraform-associate',
@@ -23,7 +23,7 @@ export const certifications: Certification[] = [
     issued: '2026-07',
     expires: '2028-07',
     credentialUrl: 'https://www.credly.com/badges/4719151d-8d5b-4253-a286-54a86f26abd2/',
-    badge: '/badges/terraform-associate.png',
+    badge: '/badges/terraform-associate.webp',
   },
   {
     id: 'databricks-de-associate',
@@ -33,7 +33,7 @@ export const certifications: Certification[] = [
     expires: '2028-01',
     credentialId: '172249480',
     credentialUrl: 'https://credentials.databricks.com/f6d77ea7-cadd-4ab1-9c8e-48b4bb4801a7#acc.jaV61w4g',
-    badge: '/badges/databricks-de-associate.png',
+    badge: '/badges/databricks-de-associate.webp',
   },
   {
     id: 'aws-cloud-practitioner',
@@ -42,7 +42,7 @@ export const certifications: Certification[] = [
     issued: '2025-07',
     expires: '2028-07',
     credentialUrl: 'https://www.credly.com/badges/9a488844-2ac0-4bab-8d89-ad76801a6203/',
-    badge: '/badges/aws-cloud-practitioner.png',
+    badge: '/badges/aws-cloud-practitioner.webp',
   },
   {
     id: 'dataiku-core-designer',

@@ -9,7 +9,7 @@
 }
 
 .badges img {
-  /* Same height for all; width follows each badge's shape (shields are portrait). */
-  width: auto;
+  /* Badge files are square, padded around portrait shields. */
+  width: 48px;
   height: 48px;
 }

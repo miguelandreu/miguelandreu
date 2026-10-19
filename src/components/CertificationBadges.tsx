@@ -13,7 +13,7 @@ export function CertificationBadges() {
     <ul className={styles.badges} aria-label={t.credentials.certifications}>
       {withBadge.map((item) => (
         <li key={item.id}>
-          <img src={item.badge} alt={item.name} height="48" />
+          <img src={item.badge} alt={item.name} width="48" height="48" />
         </li>
       ))}
     </ul>

@@ -33,14 +33,14 @@ export interface Certification {
   expires?: YearMonth
   credentialId?: string
   credentialUrl?: string
-  /** Badge image path under public/, e.g. '/badges/aws-cloud-practitioner.png'. Shown on Home. */
+  /** Badge image path under public/, e.g. '/badges/aws-cloud-practitioner.webp' (square). Shown on Home. */
   badge?: string
 }
 
 export interface Experience {
   id: string
   company: string
-  /** Logo image path under public/, e.g. '/logos/databricks.png'. */
+  /** Logo image path under public/, e.g. '/logos/databricks.webp'. */
   companyLogo?: string
   companyUrl?: string
   role: Localized
