@@ -44,3 +44,13 @@ export interface Experience {
   highlights: Localized<string[]>
   tech: string[]
 }
+
+export interface Project {
+  id: string
+  /** Project name, usually not translated. */
+  title: string
+  summary: Localized
+  year: number
+  tech: string[]
+  links: { repo?: string; live?: string }
+}

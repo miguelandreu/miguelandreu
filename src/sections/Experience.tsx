@@ -39,7 +39,7 @@ function ExperienceItem({ item }: { item: ExperienceEntry }) {
             <li key={highlight}>{highlight}</li>
           ))}
         </ul>
-        <TagList label={t.experience.technologies} tags={item.tech} />
+        <TagList label={t.technologies} tags={item.tech} />
       </div>
     </li>
   )

@@ -15,8 +15,9 @@ export interface UiStrings {
     expires: string
     viewCredential: string
   }
-  experience: { technologies: string }
+  projects: { title: string; code: string; live: string }
   present: string
+  technologies: string
 }
 
 export const strings: Localized<UiStrings> = {
@@ -40,8 +41,9 @@ export const strings: Localized<UiStrings> = {
       expires: 'Expires',
       viewCredential: 'View credential',
     },
-    experience: { technologies: 'Technologies' },
+    projects: { title: 'Personal projects', code: 'Code', live: 'Live site' },
     present: 'Present',
+    technologies: 'Technologies',
   },
   es: {
     skipToContent: 'Saltar al contenido',
@@ -63,7 +65,8 @@ export const strings: Localized<UiStrings> = {
       expires: 'Caduca',
       viewCredential: 'Ver credencial',
     },
-    experience: { technologies: 'Tecnologías' },
+    projects: { title: 'Proyectos personales', code: 'Código', live: 'Ver web' },
     present: 'Actualidad',
+    technologies: 'Tecnologías',
   },
 }

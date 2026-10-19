@@ -4,6 +4,7 @@ import { useLocale } from './i18n/LocaleContext'
 import { About } from './sections/About'
 import { Experience } from './sections/Experience'
 import { Home } from './sections/Home'
+import { Projects } from './sections/Projects'
 
 function App() {
   const { t } = useLocale()
@@ -18,6 +19,7 @@ function App() {
         <Home />
         <About />
         <Experience />
+        <Projects />
       </main>
       <Footer />
     </>
