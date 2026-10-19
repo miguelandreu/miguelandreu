@@ -1,38 +1,39 @@
 import type { Project } from './types'
 
-// TODO: replace placeholder entries. Personal projects, most recent first.
+// Personal projects, most recent first.
 export const projects: Project[] = [
   {
     id: 'portfolio',
-    title: 'Portfolio',
+    title: 'miguelandreu',
     summary: {
-      en: 'This website: a bilingual React portfolio deployed on Cloudflare Workers.',
-      es: 'Esta web: un portfolio bilingüe en React desplegado en Cloudflare Workers.',
+      en: 'This website: a bilingual (English/Spanish) portfolio built with React and TypeScript and deployed on Cloudflare Workers.',
+      es: 'Esta web: un portfolio bilingüe (inglés/español) hecho con React y TypeScript y desplegado en Cloudflare Workers.',
     },
     year: 2026,
     tech: ['React', 'TypeScript', 'Cloudflare Workers'],
-    links: { repo: 'https://example.com' },
+    links: { repo: 'https://github.com/miguelandreu/miguelandreu' },
   },
   {
-    id: 'project-two',
-    title: 'Project Name',
+    id: 'dabs-metadata',
+    title: 'dabs-metadata',
     summary: {
-      en: 'One or two sentences on what it does, why you built it and what you learned.',
-      es: 'Una o dos frases sobre qué hace, por qué lo creaste y qué aprendiste.',
+      en: 'Metadata-driven medallion pipelines on Databricks: Spark Declarative Pipelines generated from configuration and deployed with Databricks Asset Bundles.',
+      es: 'Pipelines medallón dirigidos por metadatos en Databricks: Spark Declarative Pipelines generados a partir de configuración y desplegados con Databricks Asset Bundles.',
     },
-    year: 2025,
-    tech: ['Python', 'FastAPI'],
-    links: { repo: 'https://example.com', live: 'https://example.com' },
+    year: 2026,
+    tech: ['Python', 'Databricks', 'Asset Bundles', 'Spark Declarative Pipelines'],
+    links: { repo: 'https://github.com/miguelandreu/dabs-metadata' },
   },
   {
-    id: 'project-three',
-    title: 'Another Project',
+    id: 'weekly-menu-helper',
+    title: 'Weekly Menu Helper',
     summary: {
-      en: 'A short description of another personal project.',
-      es: 'Una breve descripción de otro proyecto personal.',
+      en: 'A planner for the weekly meal menu.',
+      es: 'Un planificador del menú semanal.',
     },
-    year: 2024,
-    tech: ['Go'],
+    tech: [],
+    // TODO: add year, tech and the repo link (https://github.com/miguelandreu/weekly_menu_helper)
+    // once the repository is public; it is private now, so the link would 404 for visitors.
     links: {},
   },
 ]

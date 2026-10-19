@@ -11,10 +11,10 @@ export function ProjectCard({ project }: { project: Project }) {
     <li className={styles.card}>
       <div className={styles.header}>
         <h3>{project.title}</h3>
-        <span className={styles.year}>{project.year}</span>
+        {project.year && <span className={styles.year}>{project.year}</span>}
       </div>
       <p>{project.summary[locale]}</p>
-      <TagList label={t.technologies} tags={project.tech} />
+      {project.tech.length > 0 && <TagList label={t.technologies} tags={project.tech} />}
       {(repo || live) && (
         <p className={styles.links}>
           {repo && (

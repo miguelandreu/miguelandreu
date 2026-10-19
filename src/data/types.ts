@@ -55,7 +55,7 @@ export interface Project {
   /** Project name, usually not translated. */
   title: string
   summary: Localized
-  year: number
+  year?: number
   tech: string[]
   links: { repo?: string; live?: string }
 }
