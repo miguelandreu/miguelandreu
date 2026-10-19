@@ -8,15 +8,11 @@ export interface UiStrings {
   navLabel: string
   theme: { toLight: string; toDark: string }
   sections: Record<SectionId, string>
-  home: { viewProjects: string; contact: string }
+  home: { contact: string }
   about: {
     education: string
     certifications: string
-    issued: string
-    expires: string
     viewCredential: string
-    credentialId: string
-    expired: string
   }
   projects: { title: string; code: string; live: string }
   present: string
@@ -37,15 +33,11 @@ export const strings: Localized<UiStrings> = {
       projects: 'Projects',
       contact: 'Contact',
     },
-    home: { viewProjects: 'View projects', contact: 'Get in touch' },
+    home: { contact: 'Get in touch' },
     about: {
       education: 'Education',
       certifications: 'Certifications',
-      issued: 'Issued',
-      expires: 'Expires',
       viewCredential: 'View credential',
-      credentialId: 'Credential ID',
-      expired: 'Expired',
     },
     projects: { title: 'Personal projects', code: 'Code', live: 'Live site' },
     present: 'Present',
@@ -64,15 +56,11 @@ export const strings: Localized<UiStrings> = {
       projects: 'Proyectos',
       contact: 'Contacto',
     },
-    home: { viewProjects: 'Ver proyectos', contact: 'Contactar' },
+    home: { contact: 'Contactar' },
     about: {
       education: 'Formación',
       certifications: 'Certificaciones',
-      issued: 'Emitida',
-      expires: 'Caduca',
       viewCredential: 'Ver credencial',
-      credentialId: 'ID de la credencial',
-      expired: 'Caducó',
     },
     projects: { title: 'Proyectos personales', code: 'Código', live: 'Ver web' },
     present: 'Actualidad',

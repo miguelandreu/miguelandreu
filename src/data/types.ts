@@ -33,6 +33,8 @@ export interface Certification {
   expires?: YearMonth
   credentialId?: string
   credentialUrl?: string
+  /** Badge image path under public/, e.g. '/badges/aws-cloud-practitioner.png'. Shown on Home. */
+  badge?: string
 }
 
 export interface Experience {

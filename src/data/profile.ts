@@ -2,10 +2,10 @@ import type { Profile } from './types'
 
 export const profile: Profile = {
   name: 'Miguel Andreu',
-  // TODO: replace placeholder role, intro, bio and contact intro.
+  // TODO: replace placeholder intro, bio and contact intro.
   role: {
-    en: 'Software Engineer',
-    es: 'Ingeniero de software',
+    en: 'Databricks Solutions Architect / Forward Deployed Engineer',
+    es: 'Databricks Solutions Architect / Forward Deployed Engineer',
   },
   intro: {
     en: 'A short introduction goes here: what you do, what you care about and what you are looking for.',

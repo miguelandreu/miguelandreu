@@ -1,3 +1,4 @@
+import { CertificationBadges } from '../components/CertificationBadges'
 import { profile } from '../data/profile'
 import { useLocale } from '../i18n/LocaleContext'
 import styles from './Home.module.css'
@@ -11,13 +12,11 @@ export function Home() {
       <p className={styles.role}>{profile.role[locale]}</p>
       <p className={styles.intro}>{profile.intro[locale]}</p>
       <div className={styles.actions}>
-        <a className={styles.primary} href="#projects">
-          {t.home.viewProjects}
-        </a>
-        <a className={styles.secondary} href="#contact">
+        <a className={styles.primary} href="#contact">
           {t.home.contact}
         </a>
       </div>
+      <CertificationBadges />
     </section>
   )
 }

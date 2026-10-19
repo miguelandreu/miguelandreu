@@ -22,27 +22,17 @@
   margin-top: var(--space-8);
 }
 
-.primary,
-.secondary {
+.primary {
   display: inline-block;
   padding: var(--space-3) var(--space-6);
   border: 1px solid var(--color-accent);
   border-radius: var(--radius);
   font-weight: 600;
   text-decoration: none;
-}
-
-.primary {
   color: var(--color-on-accent);
   background: var(--color-accent);
 }
 
-.secondary {
-  border-color: var(--color-border);
-  color: var(--color-text);
-}
-
-.primary:hover,
-.secondary:hover {
+.primary:hover {
   text-decoration: underline;
 }

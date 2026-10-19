@@ -3,6 +3,8 @@ import type { Certification } from './types'
 // Most recent first.
 // Paste the verification URL into credentialUrl to show a "View credential" link;
 // leave it empty ('') when the certification has no public credential page.
+// Put badge images in public/badges/ and set badge to their path (e.g. '/badges/aws.png')
+// to show them on the Home section; certifications without a badge are not shown there.
 export const certifications: Certification[] = [
   {
     id: 'databricks-de-professional',
@@ -12,6 +14,7 @@ export const certifications: Certification[] = [
     expires: '2028-09',
     credentialId: '194134329',
     credentialUrl: '',
+    badge: '',
   },
   {
     id: 'terraform-associate',
@@ -20,6 +23,7 @@ export const certifications: Certification[] = [
     issued: '2026-07',
     expires: '2028-07',
     credentialUrl: '',
+    badge: '',
   },
   {
     id: 'databricks-de-associate',
@@ -29,6 +33,7 @@ export const certifications: Certification[] = [
     expires: '2028-01',
     credentialId: '172249480',
     credentialUrl: '',
+    badge: '',
   },
   {
     id: 'aws-cloud-practitioner',
@@ -37,6 +42,7 @@ export const certifications: Certification[] = [
     issued: '2025-07',
     expires: '2028-07',
     credentialUrl: '',
+    badge: '',
   },
   {
     id: 'dataiku-core-designer',
@@ -45,6 +51,7 @@ export const certifications: Certification[] = [
     issued: '2024-07',
     credentialId: 'gt83ofz4asv2',
     credentialUrl: '',
+    badge: '',
   },
   {
     id: 'azure-fundamentals',
@@ -53,5 +60,6 @@ export const certifications: Certification[] = [
     issued: '2024-04',
     credentialId: 'F7623E5A1048AF38',
     credentialUrl: '',
+    badge: '',
   },
 ]

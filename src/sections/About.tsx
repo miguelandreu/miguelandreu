@@ -2,8 +2,7 @@ import { Section } from '../components/Section'
 import { certifications } from '../data/certifications'
 import { education } from '../data/education'
 import { profile } from '../data/profile'
-import type { Certification, Education, YearMonth } from '../data/types'
-import { formatYearMonth } from '../i18n/format'
+import type { Certification, Education } from '../data/types'
 import { useLocale } from '../i18n/LocaleContext'
 import styles from './About.module.css'
 
@@ -18,24 +17,19 @@ export function About() {
         ))}
       </div>
 
-      <div className={styles.columns}>
-        <div>
-          <h3 className={styles.subtitle}>{t.about.education}</h3>
-          <ul className={styles.list}>
-            {education.map((item) => (
-              <EducationItem key={item.id} item={item} />
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h3 className={styles.subtitle}>{t.about.certifications}</h3>
-          <ul className={styles.list}>
-            {certifications.map((item) => (
-              <CertificationItem key={item.id} item={item} />
-            ))}
-          </ul>
-        </div>
-      </div>
+      <h3 className={styles.subtitle}>{t.about.education}</h3>
+      <ul className={styles.list}>
+        {education.map((item) => (
+          <EducationItem key={item.id} item={item} />
+        ))}
+      </ul>
+
+      <h3 className={styles.subtitle}>{t.about.certifications}</h3>
+      <ul className={styles.grid}>
+        {certifications.map((item) => (
+          <CertificationCard key={item.id} item={item} />
+        ))}
+      </ul>
     </Section>
   )
 }
@@ -62,44 +56,33 @@ function EducationItem({ item }: { item: Education }) {
   )
 }
 
-function CertificationItem({ item }: { item: Certification }) {
-  const { locale, t } = useLocale()
+/** Name, issuer and year; the whole card links to the credential when there is one. */
+function CertificationCard({ item }: { item: Certification }) {
+  const { t } = useLocale()
+  const year = item.issued.slice(0, 4)
+
+  const content = (
+    <>
+      <span className={styles.name}>{item.name}</span>
+      <span className={styles.meta}>
+        {item.issuer} · <time dateTime={item.issued}>{year}</time>
+      </span>
+    </>
+  )
 
   return (
     <li>
-      <p className={styles.name}>{item.name}</p>
-      <p className={styles.meta}>
-        {item.issuer}
-        {' · '}
-        {t.about.issued} <time dateTime={item.issued}>{formatYearMonth(item.issued, locale)}</time>
-        {item.expires && (
-          <>
-            {' · '}
-            {isPast(item.expires) ? t.about.expired : t.about.expires} <time dateTime={item.expires}>{formatYearMonth(item.expires, locale)}</time>
-          </>
-        )}
-      </p>
-      {item.credentialId && (
-        <p className={styles.meta}>
-          {t.about.credentialId}: <span className={styles.credentialId}>{item.credentialId}</span>
-        </p>
-      )}
-      {item.credentialUrl && (
-        <a
-          className={styles.credential}
-          href={item.credentialUrl}
-          aria-label={`${t.about.viewCredential}: ${item.name}`}
-        >
-          {t.about.viewCredential}
+      {item.credentialUrl ? (
+        <a className={`${styles.card} ${styles.cardLink}`} href={item.credentialUrl}>
+          {content}
+          <span className="visually-hidden">{t.about.viewCredential}</span>
+          <svg className={styles.linkIcon} viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M7 17 17 7M7 7h10v10" />
+          </svg>
         </a>
+      ) : (
+        <div className={styles.card}>{content}</div>
       )}
     </li>
   )
-}
-
-/** Whether a month is before the current one, e.g. an expiry date that has passed. */
-function isPast(value: YearMonth) {
-  const now = new Date()
-  const current = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
-  return value < current
 }
