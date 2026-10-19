@@ -1,6 +1,7 @@
 .badges {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-4);
   margin-top: var(--space-12);
   padding: 0;
@@ -8,9 +9,9 @@
 }
 
 .badges img {
-  width: 80px;
+  /* Same height for all; width follows each badge's shape (shields are portrait). */
+  width: auto;
   height: 80px;
-  object-fit: contain;
 }
 
 .link {
