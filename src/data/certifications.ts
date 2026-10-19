@@ -1,6 +1,8 @@
 import type { Certification } from './types'
 
-// Most recent first. Add credentialUrl to show a "View credential" link.
+// Most recent first.
+// Paste the verification URL into credentialUrl to show a "View credential" link;
+// leave it empty ('') when the certification has no public credential page.
 export const certifications: Certification[] = [
   {
     id: 'databricks-de-professional',
@@ -9,6 +11,7 @@ export const certifications: Certification[] = [
     issued: '2026-09',
     expires: '2028-09',
     credentialId: '194134329',
+    credentialUrl: '',
   },
   {
     id: 'terraform-associate',
@@ -16,6 +19,7 @@ export const certifications: Certification[] = [
     issuer: 'IBM',
     issued: '2026-07',
     expires: '2028-07',
+    credentialUrl: '',
   },
   {
     id: 'databricks-de-associate',
@@ -24,21 +28,7 @@ export const certifications: Certification[] = [
     issued: '2026-01',
     expires: '2028-01',
     credentialId: '172249480',
-  },
-  {
-    id: 'databricks-azure-platform-architect',
-    name: 'Academy Accreditation - Azure Databricks Platform Architect',
-    issuer: 'Databricks',
-    issued: '2025-09',
-    credentialId: '161266262',
-  },
-  {
-    id: 'databricks-fundamentals',
-    name: 'Academy Accreditation - Databricks Fundamentals',
-    issuer: 'Databricks',
-    issued: '2025-07',
-    expires: '2026-07',
-    credentialId: '156758488',
+    credentialUrl: '',
   },
   {
     id: 'aws-cloud-practitioner',
@@ -46,22 +36,7 @@ export const certifications: Certification[] = [
     issuer: 'Amazon Web Services (AWS)',
     issued: '2025-07',
     expires: '2028-07',
-  },
-  {
-    id: 'databricks-aws-platform-architect',
-    name: 'Academy Accreditation - AWS Databricks Platform Architect',
-    issuer: 'Databricks',
-    issued: '2025-07',
-    expires: '2027-07',
-    credentialId: '154302209',
-  },
-  {
-    id: 'databricks-genai-fundamentals',
-    name: 'Academy Accreditation - Generative AI Fundamentals',
-    issuer: 'Databricks',
-    issued: '2025-07',
-    expires: '2027-07',
-    credentialId: '154114730',
+    credentialUrl: '',
   },
   {
     id: 'dataiku-core-designer',
@@ -69,13 +44,7 @@ export const certifications: Certification[] = [
     issuer: 'Dataiku',
     issued: '2024-07',
     credentialId: 'gt83ofz4asv2',
-  },
-  {
-    id: 'datacamp-ai-fundamentals',
-    name: 'AI Fundamentals',
-    issuer: 'DataCamp',
-    issued: '2024-05',
-    credentialId: 'AIF0028875795738',
+    credentialUrl: '',
   },
   {
     id: 'azure-fundamentals',
@@ -83,12 +52,6 @@ export const certifications: Certification[] = [
     issuer: 'Microsoft',
     issued: '2024-04',
     credentialId: 'F7623E5A1048AF38',
-  },
-  {
-    id: 'efset-c2',
-    name: 'EFSET English Certificate 86/100 (C2 Proficiency)',
-    issuer: 'EF SET',
-    issued: '2022-12',
-    credentialId: 'CySA5G',
+    credentialUrl: '',
   },
 ]
