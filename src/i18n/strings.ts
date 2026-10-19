@@ -7,6 +7,7 @@ export interface UiStrings {
   navLabel: string
   theme: { toLight: string; toDark: string }
   sections: Record<SectionId, string>
+  home: { viewProjects: string; contact: string }
 }
 
 export const strings: Localized<UiStrings> = {
@@ -22,6 +23,7 @@ export const strings: Localized<UiStrings> = {
       experience: 'Experience',
       contact: 'Contact',
     },
+    home: { viewProjects: 'View projects', contact: 'Get in touch' },
   },
   es: {
     skipToContent: 'Saltar al contenido',
@@ -35,5 +37,6 @@ export const strings: Localized<UiStrings> = {
       experience: 'Experiencia',
       contact: 'Contacto',
     },
+    home: { viewProjects: 'Ver proyectos', contact: 'Contactar' },
   },
 }

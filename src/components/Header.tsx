@@ -1,3 +1,4 @@
+import { profile } from '../data/profile'
 import { LanguageSwitch } from './LanguageSwitch'
 import { Nav } from './Nav'
 import { ThemeToggle } from './ThemeToggle'
@@ -8,7 +9,7 @@ export function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <a className={styles.brand} href="#home">
-          Miguel Andreu
+          {profile.name}
         </a>
         <Nav />
         <div className={styles.controls}>

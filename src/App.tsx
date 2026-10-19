@@ -1,6 +1,7 @@
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { useLocale } from './i18n/LocaleContext'
+import { Home } from './sections/Home'
 
 function App() {
   const { t } = useLocale()
@@ -12,7 +13,7 @@ function App() {
       </a>
       <Header />
       <main id="main" className="container">
-        <h1>Miguel Andreu</h1>
+        <Home />
       </main>
       <Footer />
     </>
