@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website for Miguel Andreu, showcasing his work and projects. A single scrolling page with the sections Home, About (bio, education, certifications), Experience, Projects (personal projects) and Contact (email, GitHub, LinkedIn). The site is static-first and deployed to Cloudflare, with automatic deployment from GitHub on every push to `main`.
+Personal portfolio website for Miguel Andreu, showcasing his work and projects. A single scrolling page with the sections Home (intro and certification badges), Experience, Certifications & courses (education and certifications), Projects (personal projects) and Contact (email, GitHub, LinkedIn). The site is static-first and deployed to Cloudflare, with automatic deployment from GitHub on every push to `main`.
 
 ## Commands
 
@@ -28,7 +28,7 @@ A React 19 SPA and a Cloudflare Worker deployed together as a single Worker (`wr
 ### Frontend (`src/`)
 
 - **Content** lives in typed data files in `src/data/` (`profile`, `education`, `certifications`, `experience`, `projects`, `social`), with types in `src/data/types.ts`. Translatable fields use `Localized<T>` (`Record<'en' | 'es', T>`), so a missing translation fails the build. Dates are `YearMonth` strings (`'2024-03'`) formatted per locale by `src/i18n/format.ts`.
-- **Sections** (`src/sections/`) are rendered in `App.tsx`. Their order and anchor ids come from `sectionIds` in `src/data/sections.ts`, which also drives the nav and its active-section highlight (`src/hooks/useActiveSection.ts`). Wrap new sections in `components/Section`, which renders the anchor and translated `<h2>`.
+- **Sections** (`src/sections/`) are rendered in `App.tsx`. Their order and anchor ids come from `sectionIds` in `src/data/sections.ts`, which also drives the nav and its active-section highlight (`src/hooks/useActiveSection.ts`). Wrap new sections in `components/Section`, which renders the anchor and translated `<h2>`. Images (company logos, certification badges) are self-hosted under `public/logos/` and `public/badges/` and referenced by path from the data files.
 - **UI strings** (nav, headings, button labels) are in `src/i18n/strings.ts`, typed as `Localized<UiStrings>`. Components read them, and the current locale, via `useLocale()`. The locale is detected from the browser, can be switched in the header, and is saved in `localStorage`; there is one URL for both languages.
 - **Styling** is plain CSS: design tokens in `src/styles/tokens.css` (colors use `light-dark()`), globals and helpers (`.container`, `.visually-hidden`, `.skip-link`) in `src/styles/base.css`, and a CSS Module per component. The theme follows the system unless the visitor uses the header toggle, which sets `data-theme` on `<html>` and is applied before first paint by an inline script in `index.html`.
 - `index.html` holds English title, description and Open Graph tags for crawlers. Keep them in sync with `src/data/profile.ts`; the app translates the title and description at runtime.
