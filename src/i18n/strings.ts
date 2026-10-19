@@ -15,6 +15,7 @@ export interface UiStrings {
     expires: string
     viewCredential: string
   }
+  experience: { technologies: string }
   present: string
 }
 
@@ -39,6 +40,7 @@ export const strings: Localized<UiStrings> = {
       expires: 'Expires',
       viewCredential: 'View credential',
     },
+    experience: { technologies: 'Technologies' },
     present: 'Present',
   },
   es: {
@@ -61,6 +63,7 @@ export const strings: Localized<UiStrings> = {
       expires: 'Caduca',
       viewCredential: 'Ver credencial',
     },
+    experience: { technologies: 'Tecnologías' },
     present: 'Actualidad',
   },
 }

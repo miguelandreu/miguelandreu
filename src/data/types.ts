@@ -31,3 +31,16 @@ export interface Certification {
   expires?: YearMonth
   credentialUrl?: string
 }
+
+export interface Experience {
+  id: string
+  company: string
+  companyUrl?: string
+  role: Localized
+  start: YearMonth
+  /** null for the current position. */
+  end: YearMonth | null
+  location?: Localized
+  highlights: Localized<string[]>
+  tech: string[]
+}
