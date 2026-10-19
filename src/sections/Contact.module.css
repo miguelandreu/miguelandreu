@@ -5,17 +5,21 @@
 
 .links {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
   gap: var(--space-3);
-  max-width: 32rem;
+  max-width: 48rem;
   margin-top: var(--space-8);
   padding: 0;
   list-style: none;
 }
 
 .link {
-  display: flex;
+  /* Phones: compact rows with the icon beside the text. */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-3);
   align-items: center;
-  gap: var(--space-3);
+  height: 100%;
   padding: var(--space-3) var(--space-4);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -32,15 +36,33 @@
   text-decoration: underline;
 }
 
+.icon {
+  grid-row: span 2;
+  color: var(--color-accent);
+}
+
+/* Wider screens: cards side by side, icon on top. */
+@media (min-width: 48rem) {
+  .link {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-1);
+    align-content: start;
+    padding: var(--space-4);
+  }
+
+  .icon {
+    grid-row: auto;
+    margin-bottom: var(--space-2);
+  }
+}
+
 .label {
   font-weight: 600;
 }
 
 .value {
-  /* Long addresses can push past narrow screens. */
-  min-width: 0;
-  margin-inline-start: auto;
+  /* Long addresses wrap instead of overflowing the card. */
   overflow-wrap: anywhere;
   font-size: var(--text-sm);
-  color: var(--color-accent);
+  color: var(--color-text-muted);
 }

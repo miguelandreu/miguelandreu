@@ -20,7 +20,9 @@ export function Contact() {
         {socialLinks.map((link) => (
           <li key={link.id}>
             <a className={styles.link} href={link.href}>
-              <SocialIcon id={link.id} />
+              <span className={styles.icon}>
+                <SocialIcon id={link.id} />
+              </span>
               <span className={styles.label}>{t.social[link.id]}</span>
               <span className={styles.value}>{displayHref(link.href)}</span>
             </a>
