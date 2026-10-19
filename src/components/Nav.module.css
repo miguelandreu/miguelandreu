@@ -23,6 +23,12 @@
   color: var(--color-text);
 }
 
+.link[aria-current] {
+  color: var(--color-text);
+  text-decoration: underline 2px var(--color-accent);
+  text-underline-offset: 0.4em;
+}
+
 @media (min-width: 48rem) {
   .nav {
     order: 0;
