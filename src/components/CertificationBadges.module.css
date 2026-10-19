@@ -13,19 +13,3 @@
   width: auto;
   height: 48px;
 }
-
-.link {
-  display: block;
-  border-radius: var(--radius);
-  transition: transform 150ms ease;
-}
-
-.link:hover {
-  transform: translateY(-2px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .link {
-    transition: none;
-  }
-}

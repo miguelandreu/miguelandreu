@@ -2,7 +2,7 @@ import { certifications } from '../data/certifications'
 import { useLocale } from '../i18n/LocaleContext'
 import styles from './CertificationBadges.module.css'
 
-/** Badge images for the certifications that have one, linked to their credential. */
+/** Badge images for the certifications that have one. */
 export function CertificationBadges() {
   const { t } = useLocale()
   const withBadge = certifications.filter((item) => item.badge)
@@ -11,20 +11,11 @@ export function CertificationBadges() {
 
   return (
     <ul className={styles.badges} aria-label={t.credentials.certifications}>
-      {withBadge.map((item) => {
-        const image = <img src={item.badge} alt={item.name} height="48" />
-        return (
-          <li key={item.id}>
-            {item.credentialUrl ? (
-              <a className={styles.link} href={item.credentialUrl}>
-                {image}
-              </a>
-            ) : (
-              image
-            )}
-          </li>
-        )
-      })}
+      {withBadge.map((item) => (
+        <li key={item.id}>
+          <img src={item.badge} alt={item.name} height="48" />
+        </li>
+      ))}
     </ul>
   )
 }
