@@ -15,7 +15,9 @@ export const experience: Experience[] = [
     start: '2026-10',
     end: null,
     location: madrid,
-    highlights: { en: [], es: [] },
+    highlights: {
+      en: ['Global Insurance Company - Architecture design assessment that identified gaps, risks and improvement opportunities, providing a long-term vision.'],
+      es: ['Empresa de Seguros Internacional - Evaluación del diseño de arquitectura que identificó brechas, riesgos y oportunidades de mejora aportando una visión a largo plazo.'] },
     tech: ['Databricks'],
   },
   {
