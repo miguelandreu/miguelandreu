@@ -3,6 +3,17 @@ import type { Project } from './types'
 // Personal projects, most recent first.
 export const projects: Project[] = [
   {
+    id: 'kids_planner',
+    title: 'Weekend Kids Activities Planner',
+    summary: {
+      en: 'Provides a set of activities for kids during weekends in the region of interest and sends the output via email.',
+      es: 'Proporciona un conjunto de actividades para niños durante los fines de semana en la región de interés y envía el resultado por correo electrónico.',
+    },
+    year: 2026,
+    tech: ['OpenAI API', 'GitHub Actions', 'Python'],
+    links: { repo: 'https://github.com/miguelandreu/kids_planner' },
+  },
+  {
     id: 'portfolio',
     title: 'Personal Portfolio',
     summary: {
